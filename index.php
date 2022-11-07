@@ -131,6 +131,7 @@
 			dataTableInit();
 		});
 
+
 		function dataTableInit() {
 			$('#tabela').DataTable();
 			var opts = {
@@ -191,7 +192,13 @@
 					$('#buscar_loading').hide();
 				},
 			})
-		})
+		});
+
+		$(document).on('keypress', function(e) {
+			if (e.which == 13) {
+				$('#buscar').click();
+			}
+		});
 	</script>
 </body>
 
